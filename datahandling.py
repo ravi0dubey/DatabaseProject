@@ -50,7 +50,6 @@ def storetomongodb():
         # collection2.insert_many(dj2)
         print("Data stored in MongoDb")
     except Exception as e:
-        print("bhola")
         print(str(e))
         return (str(e))
 
@@ -65,7 +64,7 @@ def leftjoin_operation():
         for i in df1_join.columns:
             print(df1_join[[i]])
     except Exception as e:
-        print("join issue hai bhola")
+        print("join issue")
         print(str(e))
         return (str(e))
 
@@ -78,7 +77,7 @@ def uniquedress_view():
         print("Unique Dress record\n")
         print(df1_unique_dress)
     except Exception as e:
-        print("unique record issue hai bhola")
+        print("unique record issue ")
         print(str(e))
         return (str(e))
 
@@ -89,7 +88,7 @@ def zero_recommendation_record():
         count_recommendation_zero = pd.read_sql("select count(*) from projectdb.attributedataset where recommendation = 0; ", mydb)
         print(f"zero recommendation record: {count_recommendation_zero} ")
     except Exception as e:
-        print("unique record issue hai bhola")
+        print("unique record issue")
         print(str(e))
         return (str(e))
 
@@ -104,7 +103,7 @@ def sum_of_sale():
         print(df_dress)
         return(df_dress)
     except Exception as e:
-        print("Sum of Sales issue hai bhola")
+        print("Sum of Sales issue ")
         print(str(e))
         return (str(e))
 
@@ -120,7 +119,7 @@ def third_highest_sum_of_sale():
         number1 = int(input("What highest number Total Sales value you want to print: "))
         print(df_sorted[number1:number1+1])
     except Exception as e:
-        print("Sum of Sales issue hai bhola")
+        print("Third Highest issue")
         print(str(e))
         return (str(e))
 
